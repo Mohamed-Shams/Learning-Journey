@@ -125,12 +125,55 @@ int main()
 		{
 			printf("Invalid Sign");
 		}
-	}
+	} 
 */
+
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
-	/* */
+	/* Max Number Of 3 Numbers */
+/*	float num1,num2,num3;
+	printf("Enter The 3 Numbers:\n");
+	scanf("%f %f %f",&num1,&num2,&num3);
 
+	if(num1>num2)
+	{
+		if(num1>num3)
+		{
+			printf("num1: %f is the max number",num1);
+		}
+		else
+		{
+			printf("num3: %f is the max number",num3);
+		}
+	}
+	else if(num2>num3)
+	{
+		if(num2>num1)
+		{
+			printf("num2: %f is the max number",num2);
+		}
+		else
+		{
+			printf("num1: %f is the max number",1);
+		}
+	}
+	else
+	{
+		printf("num3: %f is the max number",num3);
+	}
+*/
 
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+	/* Factorial */
+/*	int n,fact = 1;
+	printf("Enter Number: ");
+	scanf("%d",&n);
+	for(int i = n; i>=1; i--)
+	{
+		fact = fact * i;
+	}
+	printf("%d",fact);
+*/
 	return 0;
 }
