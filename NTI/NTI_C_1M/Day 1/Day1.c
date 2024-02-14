@@ -96,12 +96,7 @@ int main()
 	printf("Enter Num2: ");
 	scanf("%f",&num2);
 
-	if(num2 == 0)
-	{
-		printf("Invalid Num2");
-	}
-	else
-	{
+	
 		printf("\nEnter The sign: ");
 		scanf(" %c",&sign);
 
@@ -119,13 +114,21 @@ int main()
 		}
 		else if(sign == '/')
 		{
-			printf("Div = %f",num1/num2);
+		  if(num2 == 0)
+			{
+				printf("Invalid Num2");
+			}
+		   else
+  		   {
+                       printf("Div = %f",num1/num2);
+   		  }
+			
 		}
 		else
 		{
 			printf("Invalid Sign");
 		}
-	} 
+	
 */
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
