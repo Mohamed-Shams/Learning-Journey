@@ -2,6 +2,8 @@
 
 int main()
 {
+	/*Arrays*/
+	
 	/* Students Score Example of linear search */ 
 /*	int score,Stdarr[5],arr[5] = {100,50,75,85,50};
 	int j = 0;
@@ -78,7 +80,7 @@ int main()
 		printf("%d\n",arr3[i]);
 	}
 
-	for(i = 0; i<6; i++)
+	for(i = 0; i<5; i++)
 	{
 		for(k = i+1; k<6; k++)
 		{
@@ -100,8 +102,5 @@ int main()
 
 /*====================================================================*/
 
-	/*  */
-	
-	
 	return 0;
 }
