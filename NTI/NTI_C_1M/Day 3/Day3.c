@@ -3,7 +3,7 @@
 
 void sumAndAvgAndMaxAndMin(int *arr, int n, int *summ,float *Avg, int *Max, int *Min);
 void Calc(int num1,int num2,int *add,int *sub,int *mul);
-
+void stringCopy(char *place,char *source);
 int main()
 {
 	/* Pointer */
@@ -79,6 +79,16 @@ int main()
     }
     free(p);
 */
+
+/*====================================================================*/
+
+	/* String Copy Function */
+/*
+	char s[10];
+	char arr[10] = "Moham sh";
+	stringCopy(s,arr);
+	printf("%s",s);
+*/
 /*====================================================================*/
 	return 0;
 }
@@ -106,4 +116,14 @@ void Calc(int num1,int num2,int *add,int *sub,int *mul)
 	*add = num1 + num2;
 	*sub = num1 - num2;
 	*mul = num1 * num2;
+}
+void stringCopy(char *place,char *source)
+{
+	int i = 0;
+	while(*(source+i) != '\n')
+	{
+		*(place+i) = *(source+i);
+		i++;
+	}
+	*(place+(i+1)) = '\0';
 }
