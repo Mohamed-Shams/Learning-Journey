@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<stdlib.h>
 
 void sumAndAvgAndMaxAndMin(int *arr, int n, int *summ,float *Avg, int *Max, int *Min);
 void Calc(int num1,int num2,int *add,int *sub,int *mul);
@@ -33,8 +34,52 @@ int main()
 
 /*====================================================================*/
 
-	/* D */
+	/* Student Name */
+/*
+	char arr[20];
+    char *p = arr;
+    for (int i = 0; i < 20; i++)
+    {
+        scanf("%c",p+i);
+        if(*(p+i) == '\n')
+        {
+            break;
+        }
+    }
+    for (int i = 0; i < 20; i++)
+    {
+        scanf("%c",*(p+i));
+        if(*(p+i) == '\n')
+        {
+            break;
+        }
+    }
+*/
 
+/*====================================================================*/
+
+    /* Student Name Using Malloc */
+/*
+    char *p = (char *)malloc(20);
+    for (int i = 0; i < 20; i++)
+    {
+        scanf("%c",p+i);
+        if(*(p+i) == '\n')
+        {
+            break;
+        }
+    }
+    for (int i = 0; i < 20; i++)
+    {
+        printf("%c",*(p+i));
+        if(*(p+i) == '\n')
+        {
+            break;
+        }
+    }
+    free(p);
+*/
+/*====================================================================*/
 	return 0;
 }
 void sumAndAvgAndMaxAndMin(int *arr, int n, int *summ,float *Avg, int *Max, int *Min)
