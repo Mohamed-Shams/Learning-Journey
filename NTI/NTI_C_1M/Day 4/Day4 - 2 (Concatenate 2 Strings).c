@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-void concatinate(char str1[], char str2[], char *result);
+void Concatenate(char str1[], char str2[], char *result);
 int main()
 {
 	/* Concatinate 2 Strings with space between the 2 Strings */
@@ -15,13 +15,13 @@ int main()
 
 	printf("\nThe first string: %s\n",str1);
 	printf("The second string: %s\n",str2);
-	concatinate(str1,str2,result);
+	Concatenate(str1,str2,result);
 	printf("\nThe concatinated string: %s",result);
 
 	return 0;
 }
 
-void concatinate(char str1[], char str2[], char *result)
+void Concatenate(char str1[], char str2[], char *result)
 {
 	int i = 0;
 	int j = 0;
