@@ -2,6 +2,7 @@
 #include<stdlib.h>
  
 void usernameChecker(char str[]);
+
 int main()
 {
 	/* Username Checker */
