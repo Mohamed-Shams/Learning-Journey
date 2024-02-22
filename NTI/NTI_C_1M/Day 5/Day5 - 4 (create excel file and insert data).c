@@ -10,6 +10,7 @@ int main()
 
   FILE * filePtr = fopen("D:/Courses/Embedded Systems/Embedded_Systems/txt1.csv", "w");
   fputs("Id\tName\tScore\n", filePtr);
+  //fputs("Id,Name,Score\n", filePtr);
 
 for (int i = 0; i < 3; i++) 
 {
@@ -23,6 +24,7 @@ for (int i = 0; i < 3; i++)
   scanf("%f", &st_score);
 
   fprintf(filePtr, "%d\t%s\t%f\n", st_id, st_name, st_score);
+  //fprintf(filePtr, "%d,%s,%f\n", st_id, st_name, st_score);
 }
   
 
