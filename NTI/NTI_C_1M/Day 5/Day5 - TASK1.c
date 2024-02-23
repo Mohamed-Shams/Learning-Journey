@@ -11,6 +11,7 @@ int main()
     char last_name[100];
     float salary;
     char dept_id;
+    
 
     char choice[20];
 
