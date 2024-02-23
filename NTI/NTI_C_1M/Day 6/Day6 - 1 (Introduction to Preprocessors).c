@@ -13,7 +13,11 @@
                   }\
                 };
 
-#define Concatinate(a,b)   #a "" #b  //Concatinate strings
+   //Concatinate strings
+
+#if (5>6)
+#warning This is a warning
+#endif
 
 int main()
 {
@@ -21,9 +25,16 @@ int main()
     //printcv();
     //printf(Concatinate(Hello,213));
     //REPEAT(3,"Mo")
-    
 
-
+  unsigned int age, newage;
+  printf("Enter Your Age: ");
+  scanf("%d",&age);
+  newage = age * 365*24*60*60*1000;
+  if(newage>2147483647)
+  {
+    printf("ERROR AGE in above INT MAX");
+    return 32341;
+  }
     return 0;
 }
 
