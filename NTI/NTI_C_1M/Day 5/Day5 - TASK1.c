@@ -3,6 +3,7 @@
 #include<string.h>
 
 #define FILENAME "D:/Courses/Embedded Systems/Embedded_Systems/emp.csv"
+#define FILENAME1 "D:/Courses/Embedded Systems/Embedded_Systems/dep.csv"
 
 int main()
 {
@@ -12,7 +13,6 @@ int main()
     float salary;
     char dept_id;
     
-
     char choice[20];
 
     printf("Enter your choice (CREATE - SELECT - INSERT - DELETE): ");
@@ -45,12 +45,6 @@ int main()
 
         printf("Database Created");
         FILE *filePtr = fopen(FILENAME, "w");
-
-        if (filePtr == NULL) 
-        {
-            fprintf(stderr, "Error opening file for writing.\n");
-            return 1;
-        }
 
         fprintf(filePtr, "%s,%s,%s,%s,%s\n", c1_name, c2_name, c3_name, c4_name, c5_name);
         fclose(filePtr);
@@ -122,10 +116,45 @@ int main()
         fgets(last_name, sizeof(last_name), stdin);
         last_name[strcspn(last_name, "\n")] = '\0'; // Remove the newline character when present
         printf("Enter %s: ", c4_name);
-        scanf("%s", &salary);
+        scanf("%f", &salary);
 
-        printf("Enter %s: ", c5_name);
-        scanf(" %c", &dept_id);
+        
+        againdep:
+    printf("Enter %s: ", c5_name);
+    scanf(" %c", &dept_id);
+    getchar();
+    FILE *filePtr2 = fopen(FILENAME1, "r");
+
+    if (filePtr2 == NULL) 
+    {
+        fprintf(stderr, "Error opening file for reading.\n");
+        return 1;
+    }
+
+    int found = 0;  // Variable to check if the foreign key is found
+
+    // Loop through each line in the file
+    char line[100];
+    while (fgets(line, sizeof(line), filePtr2) != NULL) 
+    {
+        // Extract the first character of each line (assuming it's a single character)
+        char firstColumnValue = line[0];
+
+        if (firstColumnValue == dept_id) 
+        {
+            found = 1;
+            break;  // Exit the loop as soon as a match is found
+        }
+    }
+
+    fclose(filePtr2);
+
+    if (!found) 
+    {
+        printf("Error %d is a foreign key\n", dept_id);
+        goto againdep;
+    }
+
 
         fprintf(filePtr, "%c,%s,%s,%f,%c\n", emp_id, first_name,last_name, salary,dept_id);
         fclose(filePtr);
@@ -153,13 +182,6 @@ int main()
     else if (strcmp(choice, "DELETE") == 0) 
     {
         FILE *filePtr = fopen(FILENAME, "w");
-
-        if (filePtr == NULL) 
-        {
-            fprintf(stderr, "Error opening file for deleting.\n");
-            return 1;
-        }
-
         printf("Database Deleted");
         fclose(filePtr);
     }
