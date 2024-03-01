@@ -9,6 +9,7 @@ typedef struct node{
 SList* Create_list();
 SList* InsertAtBeginning(SList* head,int datain);
 void InsertAtEnd(SList* head,int datain);
+void DisplayList(SList* head);
 
 int main()
 {
@@ -17,7 +18,7 @@ int main()
   myList = Create_list();
   if(myList != NULL)
   {
-    printf("%d",myList->data);
+    DisplayList(myList);
   }
   else
   {
@@ -87,5 +88,17 @@ void InsertAtEnd(SList* head, int datain)
     }
       ptr -> next = temp;
       temp -> next = NULL;
+  }
+}
+
+void DisplayList(SList* head)
+{
+  SList *temp = head;
+  int i = 1;
+  while(temp != NULL)
+  {
+    printf("Node No.%d :%d\n",i,temp->data);
+    i++;
+    temp = temp->next;
   }
 }
