@@ -15,7 +15,7 @@ void DisplayList(SList* head);
 int main()
 {
   SList* myList = NULL;
-
+  int e;
   myList = Create_list();
   if(myList != NULL)
   {
@@ -25,7 +25,17 @@ int main()
   {
     printf("Error, Can't Allocate");
   }
-
+  printf("Add Element to beginning: ");
+  scanf("%d",&e);
+  myList = InsertAtBeginning(myList,e);
+if(myList != NULL)
+  {
+    DisplayList(myList);
+  }
+  else
+  {
+    printf("Error, Can't Allocate");
+  }
   return 0;
 }
 
