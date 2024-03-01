@@ -1,16 +1,17 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-struct list* Create_list();
 
-struct list{
+typedef struct node{
   int data;
   struct list* next;
-};
+}SList;
+
+SList* Create_list();
 
 int main()
 {
-  struct list* myList = NULL;
+  SList* myList = NULL;
 
   myList = Create_list();
   if(myList != NULL)
@@ -25,10 +26,10 @@ int main()
   return 0;
 }
 
-struct list* Create_list()
+SList* Create_list()
 {
-  struct list* head = NULL;
-  head = (struct list*) malloc(sizeof(struct list));
+  SList* head = NULL;
+  head = (SList*) malloc(sizeof(SList));
 
   int datain;
   if(head == NULL)
