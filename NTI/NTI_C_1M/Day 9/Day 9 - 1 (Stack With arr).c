@@ -42,8 +42,17 @@ int isFull(struct s *s1)
 //Push
 void push(struct s *s1, int data)
 {
-  (s1->top)++;
-  s1->arr[s1->top] = data;
+    if(isFull(s1)==1)
+  {
+    printf("Overflow");
+    exit(0);
+  }
+  else
+  {
+    (s1->top)++;
+    s1->arr[s1->top] = data;
+  }
+
 }
 //Pop
 int pop(struct s *s1)
