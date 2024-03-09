@@ -1,13 +1,15 @@
+/*This code is implemented by: @mahmoud-abo-abdoo*/
 #include <stdio.h>
 #include <stdlib.h>
 
 int count = 0;
-typedef struct node
-{
-  int data;
-  struct node *next;
-} node_t;
-node_t *top = NULL;
+
+typedef struct Node {
+    int data;
+    struct Node* next;
+} Node;
+
+Node* top = NULL;
 
 int is_stack_empty(void);
 int stack_count(void);
@@ -16,145 +18,100 @@ void print_elements_of_stack(void);
 int pop(void);
 void push(int value);
 
-int main()
-{
-  int choice, popped_value, pushed_value;
-  while (1)
-  {
+int main() {
+    int choice, popped_value, pushed_value;
+    while (1) {
+        printf("Enter your choice:\n");
+        printf("1 to push elements to stack\t2 to pop element of stack\t3 to print element of stack\n");
+        printf("4 to print top value\t5 to print number of stack\t6 to exit\n");
+        scanf("%i", &choice);
+        printf("\n");
+        
+        switch (choice) {
+        case 1:
+            printf("Enter value to push:\n");
+            scanf("%i", &pushed_value);
+            push(pushed_value);
+            break;
 
-    printf("enter your choice :\n");
-    printf("1 to push elements to stack \t 2 to pop element of stack \t 3 to  print element of stack \t 4 to print top value \t 5 to print number of stack \t 6 to exit\n ");
-    scanf("%i", &choice);
-    printf("\n \n");
-    switch (choice)
-    {
-    case 1:
-      printf("enter value of pushed\n");
-      scanf("%i", &pushed_value);
-      push(pushed_value);
-      break;
+        case 2:
+            if (is_stack_empty()) {
+                printf("Stack is empty\n");
+            } else {
+                popped_value = pop();
+                printf("Popped value is %i\n", popped_value);
+            }
+            break;
 
-    case 2:
+        case 3:
+            if (is_stack_empty()) {
+                printf("Stack is empty\n");
+            } else {
+                print_elements_of_stack();
+            }
+            break;
 
-      if (is_stack_empty() == 1)
-      {
-        printf("stack is empty\n");
-      }
-      else
-      {
+        case 4:
+            if (is_stack_empty()) {
+                printf("Stack is empty\n");
+            } else {
+                printf("Value of top is %i\n", top_element());
+            }
+            break;
 
-        popped_value = pop();
-        printf("popped value is %i\n", popped_value);
-      }
-      break;
-    case 3:
-      if (is_stack_empty() == 1)
-      {
+        case 5:
+            if (is_stack_empty()) {
+                printf("Stack is empty\n");
+            } else {
+                printf("Number of stack elements is %i\n", stack_count());
+            }
+            break;
 
-        printf("stack is empty\n");
-      }
+        case 6:
+            exit(0);
 
-      else
-      {
-
-        print_elements_of_stack();
-      }
-      break;
-    case 4:
-
-      if (is_stack_empty() == 1)
-      {
-        printf("stack is empty\n");
-      }
-      else
-      {
-
-        printf("value of top is %i\n", top_element());
-      }
-      break;
-    case 5:
-      if (is_stack_empty() == 1)
-      {
-        printf("stack is empty\n");
-      }
-      else
-      {
-        printf("number of stack elements is %i\n", stack_count());
-      }
-
-      break;
-    case 6:
-      exit(0);
-
-    default:
-      printf("wrong input\n");
+        default:
+            printf("Wrong input\n");
+        }
+        printf("\n");
     }
-    printf("\n");
-  }
-  return 0;
+    return 0;
 }
 
-int is_stack_empty(void)
-{
-  int x;
-  if (top == NULL)
-  {
-    x = 1;
-  }
-  else
-  {
-    x = 0;
-  }
-  return x;
+int is_stack_empty(void) {
+    return top == NULL;
 }
 
-void push(int value)
-{
-  node_t *temp;
-  if (top == NULL)
-  {
-    top = (node_t *)malloc(sizeof(node_t));
-    top->next = NULL;
-    top->data = value;
-  }
-  else
-  {
-
-    temp = (node_t *)malloc(sizeof(node_t));
+void push(int value) {
+    Node* temp = (Node*)malloc(sizeof(Node));
     temp->next = top;
     temp->data = value;
     top = temp;
-  }
-  count++;
+    count++;
 }
 
-int pop(void)
-{
-  int x;
-  node_t *top1 = top;
-  top1 = top1->next;
-  x = top->data;
-  free(top);
-  count--;
-  return x;
+int pop(void) {
+    int x;
+    Node* temp = top;
+    top = top->next;
+    x = temp->data;
+    free(temp);
+    count--;
+    return x;
 }
 
-void print_elements_of_stack(void)
-{
-  node_t *top1 = top;
-  while (top1 != NULL)
-  {
-    printf("%i\n", top1->data);
-    top1 = top1->next;
-  }
+void print_elements_of_stack(void) {
+    Node* temp = top;
+    while (temp != NULL) {
+        printf("%i\n", temp->data);
+        temp = temp->next;
+    }
 }
 
-int top_element(void)
-{
-  return top->data;
+int top_element(void) {
+    return top->data;
 }
 
-int stack_count(void)
-{
-  return count;
+int stack_count(void) {
+    return count;
 }
