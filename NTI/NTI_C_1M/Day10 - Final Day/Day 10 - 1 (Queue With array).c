@@ -50,7 +50,6 @@ int deQueue(struct q *q1) {
     } else {
         int last = q1->arr[q1->front];
         if (q1->front == q1->rear) {
-            // Reset pointers when dequeuing the last element
             q1->front = -1;
             q1->rear = -1;
         } else {
@@ -84,10 +83,7 @@ int main() {
     }
 
     printf("Dequeued: %d\n", deQueue(q1));
-    printf("Dequeued: %d\n", deQueue(q1));
-    printf("Dequeued: %d\n", deQueue(q1));
-    printf("Dequeued: %d\n", deQueue(q1));
-
+    
     if (isEmpty(q1) == 1) {
         printf("Queue is empty.\n");
     } else {
