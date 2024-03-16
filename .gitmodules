@@ -1,4 +1,4 @@
 [submodule "Embedded_Systems"]
-    path = Embedded_Systems
+	path = EmbeddedSystems
     url = https://github.com/Mohamed-Shams/Embedded_Systems.git
     branch = main
