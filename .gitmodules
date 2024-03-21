@@ -1,6 +1,0 @@
-[submodule "Embedded_Systems"]
-	path = Embedded_Systems
-	url = https://github.com/Mohamed-Shams/Embedded_Systems.git
-[submodule "Different_Name"]
-	path = Different_Name
-	url = https://github.com/Mohamed-Shams/Embedded_Systems.git
