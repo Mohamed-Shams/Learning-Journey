@@ -4,6 +4,10 @@ Welcome to my learning journey repository! Here, I document my progress and insi
 
 ## Industrial Automation and Digitalization
 In this section, I explore industrial automation and digitalization, focusing on practical projects.
+
+## Python
+[Python](https://github.com/Mohamed-Shams/Python)
+
 ### Projects
 - [PLC Computer Vision](https://github.com/Mohamed-Shams/PLC_ComputerVision)
 - [IIOT PLC Sorting Project](https://github.com/Mohamed-Shams/IIOT-PLC-SortingProject)
@@ -13,6 +17,3 @@ In this section, I explore industrial automation and digitalization, focusing on
 [Embedded_Systems](https://github.com/Mohamed-Shams/Embedded_Systems)
 ### Projects
 - [TicTacToe](https://github.com/Mohamed-Shams/TicTacToe)
-
-## Python
-[Python](https://github.com/Mohamed-Shams/Python)
