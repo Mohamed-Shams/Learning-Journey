@@ -1,4 +1,2 @@
-# Study-Process
-
-This is Documenting my Study Process
-This is Documenting my Study Process
+# Learning-Journey
+This is Documenting my Learning Journey
