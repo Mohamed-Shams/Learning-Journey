@@ -8,6 +8,12 @@ In this section, I explore industrial automation and digitalization, focusing on
 ## Python
 [Python](https://github.com/Mohamed-Shams/Python)
 
+## Flask
+## SQL
+## HTML & CSS & Javascript
+## UI/UX
+## C#
+
 ### Projects
 - [PLC Computer Vision](https://github.com/Mohamed-Shams/PLC_ComputerVision)
 - [IIOT PLC Sorting Project](https://github.com/Mohamed-Shams/IIOT-PLC-SortingProject)
