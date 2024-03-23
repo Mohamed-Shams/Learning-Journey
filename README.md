@@ -24,3 +24,5 @@ In this section, I explore industrial automation and digitalization, focusing on
 [Embedded_Systems](https://github.com/Mohamed-Shams/Embedded_Systems)
 ### Projects
 - [TicTacToe](https://github.com/Mohamed-Shams/TicTacToe)
+
+---
