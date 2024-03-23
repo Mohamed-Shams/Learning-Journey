@@ -1,6 +1,6 @@
 # Learning Journey Repository
 Welcome to my learning journey repository! Here, I document my progress and insights as I explore various topics.
----
+
 ---
 
 ## Industrial Automation and Digitalization
