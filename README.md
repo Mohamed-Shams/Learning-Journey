@@ -6,7 +6,7 @@ Welcome to my learning journey repository! Here, I document my progress and insi
 ## Industrial Automation and Digitalization
 In this section, I explore industrial automation and digitalization, focusing on practical projects.
 
-### Python & Flask :[Python](https://github.com/Mohamed-Shams/Python)
+### Python & Flask: [Python](https://github.com/Mohamed-Shams/Python)
 ### SQL
 ### HTML & CSS & Javascript
 ### UI/UX
